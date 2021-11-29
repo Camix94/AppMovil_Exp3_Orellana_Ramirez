@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-title class="title">DATOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card *ngFor= "let usuario of usuarios">
+    <ion-item>
+      <ion-label text-wrap> 
+        <ion-text>
+          <p  class="card-content">Usuario: {{usuario.usuario}}</p>
+        </ion-text>
+        <ion-text>
+          <p  class="card-content">Nombre: {{usuario.nombre}}</p>
+        </ion-text>
+        <ion-text>
+          <p class="card-content">Apellido: {{usuario.apellido}}</p>
+        </ion-text>
+        <ion-text>
+          <p  class="card-content">Email: {{usuario.email}} </p>
+        </ion-text>
+        <ion-text>
+          <p  class="card-content">Password: {{usuario.password}}</p>
+        </ion-text>
+      </ion-label>   
+    </ion-item>
+  </ion-card>
+  <div class="center-div">
+    <ion-button class="button" routerLink="/user-home" shape="round">
+      <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+      Volver
+    </ion-button> 
+  </div>
+  
+
+</ion-content>
